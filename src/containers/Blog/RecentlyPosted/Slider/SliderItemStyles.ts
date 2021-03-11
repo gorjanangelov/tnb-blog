@@ -9,6 +9,7 @@ type Props = {
 
 export const StyledSliderItem = styled.div<Props>`
   transition: transform 500ms ease;
+  border-radius: 20px;
   cursor: pointer;
   width: 100%;
   height: 100%;
@@ -16,10 +17,7 @@ export const StyledSliderItem = styled.div<Props>`
   display: flex;
   transform: scale(1);
   user-select: none;
-  flex: 0 0 calc (100% / ${(props) => props.visibleSlides} - ${(props) => props.slideMargin * 2}px);
-  &:last-child {
-    margin-right: 15px;
-  }
+  flex: 0 0 calc(100% / ${(props) => props.visibleSlides} - ${(props) => props.slideMargin * 2}px);
   img {
     height: 100%;
     width: 100%;
@@ -27,7 +25,7 @@ export const StyledSliderItem = styled.div<Props>`
     box-sizing: border-box;
   }
   :hover {
-    transform: scale(${(props) => props.zoomFactor / 50 + 1}) !important;
+    transform: scale(${(props) => props.zoomFactor / 100 + 1}) !important;
   }
   :hover ~ * {
     transform: translateX(${(props) => `${props.zoomFactor / 2}%`}) !important;

@@ -5,6 +5,7 @@ interface Author {
 
 export interface Article {
   title: string;
+  banner: string;
   content: string;
   datePosted: string;
   author: Author;

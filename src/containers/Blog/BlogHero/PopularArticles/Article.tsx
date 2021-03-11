@@ -1,11 +1,11 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, {FC} from 'react';
 
 import './PopularArticles.scss';
 
 interface ComponentProps {
   article: {
-    id: number;
-    banner: string;
+    title: string;
     user: string;
     datePosted: string;
     readTime: string;

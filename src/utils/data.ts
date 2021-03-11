@@ -1,3 +1,6 @@
+/* eslint-disable no-console */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable func-names */
 import parse from 'date-fns/parse';
 import {TEAMS} from 'constants/teams';
 import {Article} from 'types/blogs';
@@ -21,6 +24,12 @@ export const getArticleByTitle = (title: string): Article | undefined => {
     (article) => article.title.toLowerCase() === title.toLowerCase(),
   );
   return singleArticle;
+};
+
+export const sortByLatest = (array: any[]): any => {
+  return array.reduce(function (b, a) {
+    return b.datePosted > a.datePosted ? b : a;
+  });
 };
 
 export const getContributors = (): Contributor[] => {

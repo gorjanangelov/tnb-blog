@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React, {FC} from 'react';
 import {Article as ArticleType} from 'types/blogs';
 import Article from './Article';
@@ -8,9 +9,9 @@ interface ArticlesProps {
   articles: ArticleType[];
 }
 const sliderProps = {
-  maxVisibleSlides: 3,
-  pageTransition: 250,
-  slideMargin: 15,
+  maxVisibleSlides: 5,
+  pageTransition: 900,
+  slideMargin: 5,
   zoomFactor: 1,
 };
 
